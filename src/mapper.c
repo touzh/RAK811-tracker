@@ -243,7 +243,20 @@ static void PrepareTxFrame(uint8_t port) {
 
 		} else {
 			printf("No GPS fix.\r\n");
- 			AppDataSize = 0;
+ 			AppData[0] = 0;
+			AppData[1] = 0;
+			AppData[2] = 0;
+
+			AppData[3] = 0;;
+			AppData[4] = 0;
+			AppData[5] = 0;
+
+			AppData[6] = 0;
+			AppData[7] = 0;
+
+			AppData[8] = 0;
+
+			AppDataSize = 9;
 		}
 	}
 		break;
